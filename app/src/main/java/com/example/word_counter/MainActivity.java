@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -39,5 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void counting(View view) {
         Toast.makeText(this, spinner.getSelectedItem().toString(),LENGTH_LONG).show();
+        TextView text = (TextView) findViewById(R.id.textView);
+        text.setText ("There is: ");
     }
 }
