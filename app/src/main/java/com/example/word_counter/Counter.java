@@ -4,7 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Counter {
-    public int countChars(String input)
+    public static int countChars(String input)
     {
         if (input == null || input.isEmpty()) return 0;
         return input.length();
@@ -14,7 +14,7 @@ public class Counter {
         String[] words = input.trim().split("\\s+");
         return words.length;
     }
-    public int countSentences(String input)
+    public static int countSentences(String input)
     {
         if (input == null || input.isEmpty()) return 0;
         int sentenceCount = 0;
