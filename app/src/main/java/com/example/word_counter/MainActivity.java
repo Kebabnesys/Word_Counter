@@ -47,9 +47,9 @@ public class MainActivity extends AppCompatActivity {
         String input = editText.getText().toString();
         String option = spinner.getSelectedItem().toString();
         if (input.isEmpty()) {
+            text.setText("Empty");
             Toast.makeText(getApplicationContext(), "Nothing written", Toast.LENGTH_SHORT).show();
-            return;
-        }
+        } else {
             int count = 0;
             switch (option) {
                 case "Sentences":
@@ -61,8 +61,12 @@ public class MainActivity extends AppCompatActivity {
                 case "Characters":
                     count = Counter.countChars(input);
                     break;
+                case "Numbers":
+                    count = Counter.countNumbers(input);
+                    break;
             }
 
             text.setText("There is: " + count);
+        }
     }
 }

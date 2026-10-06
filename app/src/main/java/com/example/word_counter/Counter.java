@@ -25,5 +25,18 @@ public class Counter {
         }
         return sentenceCount;
     }
+    public static int countNumbers(String input)
+    {
+        if (input == null || input.isEmpty()) return 0;
+        int numberCount = 0;
+        Pattern pattern = Pattern.compile("[\\d+]");
+        Matcher matcher = pattern.matcher(input);
+        while (matcher.find()) {
+            numberCount++;
+        }
+        return numberCount;
+
+    }
+
 
 }
